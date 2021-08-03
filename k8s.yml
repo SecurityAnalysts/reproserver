@@ -111,6 +111,8 @@ spec:
           image: reproserver_web
           imagePullPolicy: IfNotPresent
           env:
+            - name: REPROSERVER_DEBUG
+              value: "1"
             - name: WEB_PROXY_URL
               valueFrom:
                 configMapKeyRef:
